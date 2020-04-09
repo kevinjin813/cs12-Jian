@@ -1,8 +1,6 @@
-package lesson19;
+package PA5;
 
-public class StayAtHomeIfSick extends Person{
-
-
+public class StayAtHomeIfSick extends Person {
 	public StayAtHomeIfSick() {
 		super();
 	}

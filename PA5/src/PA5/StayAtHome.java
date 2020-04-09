@@ -1,8 +1,6 @@
-package lesson19;
+package PA5;
 
-public class StayAtHome extends Person{
-
-
+public class StayAtHome extends Person {
 	public StayAtHome() {
 		super();
 	}
@@ -10,5 +8,4 @@ public class StayAtHome extends Person{
 	public void tryToMove() {
 		// don't move
 	}
-
 }

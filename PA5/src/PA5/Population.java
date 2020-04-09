@@ -1,15 +1,12 @@
-package lesson19;
-
+package PA5;
 import java.util.Random;
 
 
 /**
 A population is a list of people whose types are
 Person or some subclass of Person.
-
 The Population class can have subclasses of different
 kinds of populations!
-
 */
 public class Population{
   public Person[] people;
@@ -58,5 +55,10 @@ public class Population{
     // infect someone
     people[0].infected = true;
   }
-
 }
+
+
+
+
+
+

@@ -1,7 +1,6 @@
-package lesson19;
+package PA5;
 
 public class Country {
-
 	/** these are summary statistics about the epidemic
 	*/
 	int numInfected=0;
@@ -101,5 +100,4 @@ public class Country {
 			System.out.println();
 		}
 	}
-
 }
