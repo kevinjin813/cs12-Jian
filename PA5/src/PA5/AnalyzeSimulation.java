@@ -18,6 +18,13 @@ public class AnalyzeSimulation {
 				int numEssential = Integer.parseInt(args[3]);
 				int numSkeptic = Integer.parseInt(args[4]);
 	            int numRepetition=Integer.parseInt(args[5]);
+				
+				/*int width = 10;
+				int height = 20;
+				int numStayHome = 50;
+				int numEssential = 0;
+				int numSkeptic =0;
+	            int numRepetition=100;*/
 				// next we create the population and the country
 				Population population;
 				int[] newInfect=new int[numRepetition];
