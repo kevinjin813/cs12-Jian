@@ -6,7 +6,7 @@ public class Country {
 	int numInfected=0;
 	int numRecovered=0;
 	int numPeople=0;
-
+	int newInfected=0;
 	/**
 	 * places is a 2d array representing the places a person could be
 	 * each entry can contain either a Person or null
@@ -73,11 +73,14 @@ public class Country {
 				}
 			}
 		}
+		this.newInfected=count-numInfected;
 		this.numInfected = count;
 		this.numPeople = numPeople;
 		this.numRecovered = recovered;
 	}
+	
 
+	
 	public void printStats() {
 		this.getStats();
 		System.out.println("infected: "+ this.numInfected
