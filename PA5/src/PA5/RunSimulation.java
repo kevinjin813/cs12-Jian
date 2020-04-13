@@ -16,6 +16,11 @@ public class RunSimulation {
 			int numEssential = Integer.parseInt(args[3]);
 			int numSkeptic = Integer.parseInt(args[4]);
             
+			/*int width = 10;
+			int height = 20;
+			int numStayHome = 50;
+			int numEssential = 0;
+			int numSkeptic =0;*/
 			// next we create the population and the country
 			Population population;
 
@@ -41,7 +46,7 @@ public class RunSimulation {
 				country.simulateOneStep();
 				country.printState(k);
 
-				if (country.numInfected==0) {
+				if (country.currInfected==0) {
 					break;
 
 				}

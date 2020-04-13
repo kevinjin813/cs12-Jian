@@ -7,6 +7,7 @@ public class Country {
 	int numRecovered=0;
 	int numPeople=0;
 	int newInfected=0;
+	int currInfected=1;
 	/**
 	 * places is a 2d array representing the places a person could be
 	 * each entry can contain either a Person or null
@@ -29,10 +30,10 @@ public class Country {
 
 	public void printState(int day){
 		System.out.printf("%3d ",day);
-		for(int i =0; i<numInfected; i++){
+		for(int i =0; i<currInfected; i++){
 			System.out.print("I");
 		}
-		for(int i=0; i<numPeople-numInfected-numRecovered; i++){
+		for(int i=0; i<numPeople-currInfected-numRecovered; i++){
 			System.out.print("_");
 		}
 		for(int i=0; i<numRecovered; i++){
@@ -73,8 +74,9 @@ public class Country {
 				}
 			}
 		}
-		this.newInfected=count-numInfected;
-		this.numInfected = count;
+		this.currInfected=count;
+		this.newInfected=count-numInfected+recovered;
+		this.numInfected = numInfected+newInfected;
 		this.numPeople = numPeople;
 		this.numRecovered = recovered;
 	}
@@ -83,7 +85,7 @@ public class Country {
 	
 	public void printStats() {
 		this.getStats();
-		System.out.println("infected: "+ this.numInfected
+		System.out.println("infected: "+ this.currInfected
 		      +"/"+this.numPeople
 					+" recovered:"+this.numRecovered);
 

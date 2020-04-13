@@ -12,19 +12,19 @@ public class AnalyzeSimulation {
 				// first we get the simulation parameters
 				// from the command line
 				
-				int width = Integer.parseInt(args[0]);
+				/*int width = Integer.parseInt(args[0]);
 				int height = Integer.parseInt(args[1]);
 				int numStayHome = Integer.parseInt(args[2]);
 				int numEssential = Integer.parseInt(args[3]);
 				int numSkeptic = Integer.parseInt(args[4]);
-	            int numRepetition=Integer.parseInt(args[5]);
+	            int numRepetition=Integer.parseInt(args[5]);*/
 				
-				/*int width = 10;
+				int width = 10;
 				int height = 20;
 				int numStayHome = 50;
 				int numEssential = 0;
 				int numSkeptic =0;
-	            int numRepetition=100;*/
+	            int numRepetition=1;
 				// next we create the population and the country
 				Population population;
 				int[] newInfect=new int[numRepetition];
@@ -44,13 +44,12 @@ public class AnalyzeSimulation {
 					population.placePeople(country);
 					for(int k=0;k<MAX_TICKS; k++) {
 						country.simulateOneStep();
-						if (country.numInfected==0) {
+						if (country.currInfected==0) {
 							break;
 						}
-						if(country.newInfected==0 && j==0)
+						if(country.newInfected==0 )
 						{
-							newInfect[i]=k;
-							j=1;
+							newInfect[i]=k;					
 						}
 						if(country.numInfected-country.numRecovered>max)
 						{
